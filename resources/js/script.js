@@ -1,3 +1,9 @@
+/* -------------------------------PreLoader-------------------------------------   */
+$(window).on("load",function(){
+    $('.loader-container').fadeOut(3500,function(){
+        $(this).remove();
+    }); 
+});
 $(document).ready(function() {
     $('.mobile-menu').click(function(){
         $('.header-3-container').animate({left: '0px'},300);
@@ -61,6 +67,28 @@ $(document).ready(function() {
             },
             1200:{
                 items: 4
+            }
+        }
+    })
+    $('.brand-container').owlCarousel({
+        // margin:10,
+        nav:false,
+        dots: false,
+        responsive:{
+            0:{
+                items:2
+            },
+            600:{
+                items:3
+            },
+            900:{
+                items:2
+            },
+            1000:{
+                items:3,
+            },
+            1200:{
+                items: 5
             }
         }
     })
