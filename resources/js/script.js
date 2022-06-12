@@ -19,6 +19,27 @@ $(document).ready(function() {
         
     },{
         offset: '150px'
+    });
+    $('.banner-container').owlCarousel({
+        // margin:10,
+        nav:true,
+        dots: true,
+        loop: true,
+        responsive:{
+            0:{
+                items:1
+            },
+            900:{
+                items:1
+            },
+            1000:{
+                items:1,
+            },
+            1200:{
+                items:1
+            }
+        }
+
     })
     $('.product-container').owlCarousel({
         // margin:10,

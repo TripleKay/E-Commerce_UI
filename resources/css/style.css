@@ -44,21 +44,58 @@ F8F7FF bg-soft
     border-radius: 0 20px 20px 0 !important;
 }
 /* <!-- -------------------------------banner-------------------------------------  --> */
-.banner-image{
+.banner-img{
     height: 450px;
 }
-.carousel-caption{
+.banner-content{
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    width: 400px;
+    border-radius: 20px;
+}
+.banner-container {
+    position: relative;
+    overflow: hidden;
+}
+.banner-container .owl-nav .owl-prev,
+.owl-nav .owl-next{
+    position: absolute !important ;
+    top: 45%;
+    transform: translateY(-50%);
+}
+.banner-container .owl-nav .owl-prev {
+    left: -100px;
+}
+.owl-nav .owl-next {
+    right: -100px;
+}
+.banner-container:hover .owl-nav .owl-prev {
+    left: 0;
+    transition: .3s linear;
+}
+.banner-container:hover .owl-nav .owl-next {
+    right: 0;
+    transition: .3s linear;
+}
+
+.banner-container .owl-dots{
+    position: absolute !important ;
+    bottom: 20px;
+}
+/* <!-
+/* .carousel-caption{
     top: 50%;
     bottom: auto !important;
     left: 10% !important;
     right: auto !important;
     transform: translateY(-50%);
     width: 400px;
-    text-align: left;
+    text-align: left; */
     /* background-color: #00000050;
     padding: 30px 30px;
     border-radius: 10px; */
-}
+/* } */
 
 .cat-dropdown .btn-info:focus{
     box-shadow: none !important;
@@ -220,8 +257,11 @@ F8F7FF bg-soft
     body{
         overflow-x: hidden;
     }
-    .banner-image{
+    .banner-img{
         height: 300px;
+    }
+    .banner-content{
+        width: 200px;
     }
     .cat-box{
         height: 80px;
