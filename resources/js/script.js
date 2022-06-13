@@ -92,4 +92,36 @@ $(document).ready(function() {
             }
         }
     })
+    $('.small-img-slider').owlCarousel({
+        // margin:10,
+        nav:true,
+        dots: false,
+        responsive:{
+            0:{
+                items:2
+            },
+            600:{
+                items:3
+            },
+            900:{
+                items:2
+            },
+            1000:{
+                items:3,
+            },
+            1200:{
+                items: 4
+            }
+        }
+    })
+
+    $('.small-img img').click(function(){
+        $('.small-img img').removeClass('active');
+        $(this).addClass('active');
+
+        let image = $(this).attr('src');
+        $('.big-img img').attr('src',image);
+
+    });
+
 });

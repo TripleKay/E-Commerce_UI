@@ -350,6 +350,39 @@ F8F7FF bg-soft
     max-width: 150px;
     height: 60px;
 }
+
+.big-img{
+    height: 300px;
+    text-align: center;
+}
+.big-img img{
+    height: 300px;
+}
+.small-img{
+    border: 1px solid #88888850;
+    transition: .3s linear;
+}
+.small-img img.active,
+.small-img:hover{
+    border: 1px solid #000;
+    transition: .3s linear;
+}
+.small-img-slider .owl-nav span {
+    padding: 0px 10px;
+    background-color: transparent;
+    color: #000;
+    font-size: 50px;
+    margin: 0px !important;
+}
+.small-img-slider .owl-nav .owl-prev {
+    left: -30px;
+}
+.small-img-slider .owl-nav .owl-next {
+    right: -30px;
+}
+.small-img-slider .owl-nav button:hover{
+    background-color: transparent !important;
+}
 /* <!-- -------------------------------responsive-------------------------------------  --> */
 
 /* // `sm` applies to x-small devices (portrait phones, less than 576px) */
